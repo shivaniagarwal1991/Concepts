@@ -99,7 +99,7 @@ Variable Types in PHP
 
 ## 2. Why Python Avoided Strict Types?
 
-### 👉 Python Philosophy
+### Python Philosophy
 
 - Simplicity
 - Readability
@@ -107,7 +107,47 @@ Variable Types in PHP
 
 ---
 
-### 👉 Therefore, Python focuses on:
+### Therefore, Python focuses on:
 
 - Less boilerplate code
 - Less syntax complexity
+
+# NULL vs None (PHP vs Python)
+
+---
+
+## Comparison
+
+| Language | Null Value | Type     |
+| -------- | ---------- | -------- |
+| PHP      | `NULL`     | null     |
+| Python   | `None`     | NoneType |
+
+---
+
+## Why Python uses `None` instead of `null`?
+
+---
+
+### Design Reasons
+
+- Everything in Python is an object
+- `None` is a **singleton object** (only one instance exists)
+- Cleaner and more consistent design
+
+---
+
+## Behavior Difference
+
+### PHP (Loose Comparison)
+
+```php
+NULL == 0   // true (dangerous)
+NULL == ""  // true
+
+```
+
+### Python (Strict Comparison)
+
+None == 0 # False
+None == "" # False
