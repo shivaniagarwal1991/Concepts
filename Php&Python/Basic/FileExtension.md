@@ -132,14 +132,16 @@ Contains:
 <?php
 echo "Hello";
 ?>
+```
 
 ## Basic conditions to run the file
 
 ### PHP file
+
 Cannot run directly in a browser as raw code
 Requires a server (e.g., Apache, Nginx)
 
 ### Python file
+
 Cannot be executed directly by a browser
 Requires a Python interpreter
-```

@@ -87,7 +87,7 @@ Some languages use both compilation and interpretation:
 - Compiled → Bytecode (.pyc) (platform-independent, not machine code(0,1))
 - Interpreted → Python Virtual Machine (PVM) executes the bytecode
 
-\*\* Platform-independent means:
+  \*\* Platform-independent means:
 
 A program can run on different operating systems (Windows, Linux, macOS)
 without changing its code

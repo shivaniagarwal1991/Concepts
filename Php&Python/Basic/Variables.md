@@ -28,7 +28,15 @@ Variable Types in PHP
 
 ### PHP is a dynamically typed language.
 
-Supported Types: 1) int 2) float 3) string 4) bool 5) array 6) object 7) null
+    Supported Types:
+      1) int
+      2) float
+      3) string
+      4) bool
+      5) array
+      6) object
+      7) null
+
 \*\* PHP uses a flexible array type for both indexed and associative data.
 
 ### Python is also dynamically typed.
