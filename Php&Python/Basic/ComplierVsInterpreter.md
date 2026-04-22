@@ -52,7 +52,7 @@ Source Code → Interpreter → Line-by-line Execution
 | Compilation | Bytecode (.pyc)                 | No separate bytecode (direct execution) |
 | Execution   | Python Virtual Machine (PVM)    | PHP engine                              |
 | Usage       | General-purpose                 | Web backend                             |
-| Runs on     | Local / Server                  | Server only                             |
+| Runs on     | Local / Server                  | Local/Server only                       |
 
 ---
 
@@ -116,3 +116,55 @@ However, modern PHP uses **OPcache** to cache bytecode for better performance.
 ## Important
 
 - Browsers can only see **HTML output**, not PHP or Python code.
+
+# Python vs PHP: Local and Server Execution
+
+---
+
+## How Python Works as Both Local and Server
+
+### Local (CLI / Script)
+
+```bash
+python app.py
+```
+
+\*\* Use Cases: - Automation - Data analysis - Scripts
+
+### Server (Web)
+
+Frameworks: - Django - Flask - Flow:
+Browser → Python Server → Response
+
+---
+
+## How PHP Works as Both Local and Server
+
+### Local (CLI)
+
+```bash
+php test.php
+```
+
+- Same as Python CLI
+- Can be used to run scripts
+
+### Server (Main Use)
+
+- PHP is primarily used for web development.
+
+* Flow:
+  Browser → Apache/Nginx → PHP → HTML → Browser
+  -Framework:
+  Symfony\Laravel
+
+---
+
+## Deep Comparison
+
+| Feature     | Python            | PHP           |
+| ----------- | ----------------- | ------------- |
+| CLI Support | Strong            | Yes           |
+| Web Support | Via frameworks    | Native        |
+| Design Goal | General-purpose   | Web-focused   |
+| Execution   | Interpreter (PVM) | Server engine |
