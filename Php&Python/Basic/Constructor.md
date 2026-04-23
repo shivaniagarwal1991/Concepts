@@ -1,4 +1,3 @@
-````md id="g2m4zk"
 # Constructor in Python & PHP
 
 ---
@@ -28,6 +27,7 @@ class User:
     def __init__(self, name):
         self.name = name
 ```
+
 ````
 
 ---
@@ -130,3 +130,4 @@ Automatically calls:
 | Style               | Explicit   | Implicit      |
 
 ---
+````
