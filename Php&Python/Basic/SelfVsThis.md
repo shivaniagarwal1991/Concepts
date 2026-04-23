@@ -1,4 +1,4 @@
-# 🧠 1. Basic Idea
+# 1. Basic Idea
 
 In both languages, the concept is the same:
 
@@ -46,7 +46,7 @@ u1 becomes self
 
 ---
 
-##Important
+## Important
 
 ### self is mandatory
 
@@ -128,7 +128,7 @@ public static $count = 0;
 
 ## Are self and $this reserved keywords?
 
-### Python: self is not a reserved keyword ❗
+### Python: self is not a reserved keyword
 
 ```python
 class User:

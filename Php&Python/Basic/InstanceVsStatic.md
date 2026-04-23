@@ -5,7 +5,7 @@
 ## Core Concept
 
 - **Instance → object-specific**
-- **Static → shared**
+- **Static → shared across objects but limited to class**
 
 ---
 
@@ -255,3 +255,107 @@ Thread2 → count++
   - Shared data is required
   - Constant values
   - Counters
+
+---
+
+## Global vs Static
+
+## Core Idea
+
+- **Global → accessible everywhere (program-level)(system-wide shared state)**
+- **Static → shared within a class (class-level)(class-scoped shared state)**
+
+---
+
+# What is Global?
+
+    -  A **global variable** is defined outside functions/classes
+    -  It can be accessed across different parts of the program
+
+---
+
+## Python Global
+
+```python
+x = 10  # global variable
+
+def show():
+    global x
+    x = 20
+
+show()
+print(x)  # 20
+```
+
+- Important: Use global keyword to modify it inside a function
+
+## PHP Global
+
+```php
+$x = 10;
+
+function test() {
+   global $x;
+   $x = 20;
+}
+
+test();
+echo $x; // 20
+```
+
+---
+
+# What is Static?
+
+    -  A static variable belongs to the class
+    -  It is shared across all objects
+
+---
+
+## Python Static
+
+```python
+class User:
+    count = 0  # static
+
+    def __init__(self):
+        User.count += 1
+
+u1 = User()
+u2 = User()
+
+print(User.count)  # 2
+```
+
+- Important: Use global keyword to modify it inside a function
+
+## PHP Static
+
+```php
+class User {
+    public static $count = 0;
+
+    public function __construct() {
+        self::$count++;
+    }
+}
+
+$u1 = new User();
+$u2 = new User();
+
+echo User::$count; // 2
+```
+
+---
+
+## Deep Comparison
+
+| Feature    | Global                    | Static                 |
+| ---------- | ------------------------- | ---------------------- |
+| Scope      | Entire program            | Class only             |
+| Belongs to | Program                   | Class                  |
+| Access     | Direct / `global` keyword | Class name / `self`    |
+| Lifetime   | Entire program runtime    | Entire program runtime |
+| Use case   | Shared config, constants  | Counters, class data   |
+
+---
