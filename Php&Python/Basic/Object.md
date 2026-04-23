@@ -396,3 +396,61 @@ Causes runtime issues
 __new__  → "Make the object"
 __init__ → "Prepare the object"
 ```
+
+---
+
+## After Update
+
+```text
+User.count += 1
+
+User.count = 1
+
+u1.count = 1
+u2.count = 1
+```
+
+Shared across all instances
+
+---
+
+## Access Behavior (Very Important)
+
+### Case 1: Access via Object
+
+```text
+print(u1.count) # 1
+```
+
+Python checks in this order:
+
+1. Object
+2. Then class
+
+---
+
+### Case 2: Override Mistake
+
+```text
+u1.count = 5
+
+Now:
+
+u1.count = 5 (instance variable ❗)
+u2.count = 1 (class variable)
+
+```
+
+⚠️ This creates a new instance variable, not modify static
+
+---
+
+## Correct Way to Modify Static
+
+```text
+User.count += 1
+```
+
+Always use the class name
+
+---

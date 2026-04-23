@@ -38,6 +38,9 @@ u2.count = 1
 
 Both objects see the same value → this is shared
 
+- in Python, class variables act like static variables by default
+- in Python, no static keyword. instead: Class variable = static-like behavior
+
 ---
 
 ### Instance Case
